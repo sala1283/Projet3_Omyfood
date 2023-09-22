@@ -1,0 +1,166 @@
+@import './_variables';
+@import './_mixins';
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    max-width: $max-width;
+    fieldset { border: 0; }
+
+
+    header {
+
+        box-shadow: 0 5px 10px lightgrey;
+        h1 {
+            font-family : 'Shrikhand', cursive;
+            font-size: 2.3rem;
+            margin: 0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        > div {
+            display: flex;
+        }
+
+        .logo {
+            @include flex-center;
+            flex-basis: 2rem;
+            margin-left: 1rem;
+            align-items: center;
+            i {
+                font-size: 2rem;
+                color: black;
+                cursor: pointer;
+            }
+        }
+
+        .titre {
+            @include flex-center;
+            flex-basis: 100%;
+            h1 {
+                font-family: "Shrikhand", cursive;
+            }
+        }
+    }
+
+    
+    main {
+        background-color: $--ultralightgray;
+        img {
+            height: 300px;
+            object-fit: cover;
+            object-position: 50% 70%;
+            width: 100%;
+        }
+
+        .titre-menu {
+            position: relative;
+            top: -4rem;
+            border-radius: 3rem 3rem 0 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 95%;
+            padding-left: 2rem;
+            background-color: $--ultralightgray;
+            h1 {
+                font-family: 'Shrikhand', cursive;
+                font-size: 1.5rem;
+            }
+            i {
+                display: flex;
+                font-size: 2rem;
+                padding-right: 3rem;
+            }
+            @include color-heart();
+        }
+        h3 {
+            @include flex-center;
+            flex-basis: 100%;
+            // mise en majuscule des titres de menus
+            text-transform: uppercase;  
+            color: $--grayblack;
+            font-weight: normal;
+            margin: 0;
+            padding-bottom: 1rem;
+            position: relative;
+            // trait de soulignement vert
+            &::after {          
+                position: absolute;
+                top: 25px;
+                content: "";
+                height: 3px;
+                width: 50px;
+                background-color: $--tertiary;
+            }
+        }
+        .menus {
+            .articles {
+                .entrees, .plats, .desserts {
+                    width: 100%;
+                    @include nowrap-ellipsis;                        
+                    @include article-menu;
+                    h3 {
+                        display: flex;
+                        justify-content: flex-start!important;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        @include btn-style;
+
+    }
+
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: $--grayblack;
+        color: white;
+        padding: 1rem 0 1rem 1.5rem;
+        h1 {
+            display: flex;
+            font-family: 'Shrikhand', cursive;
+            font-weight: normal;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            align-items: center;
+        }
+        i {
+            padding-right: 5px;
+        }
+       
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        main {
+            @include choix-menu;
+            @include btn-style;
+            footer {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                h1{
+
+                    margin-left:5%;
+                    margin-right:4%;
+
+                   }
+                .footer {
+                    display: inline-flex;
+                    gap:10px;
+                }   }
+            }
+    }    
+
+}
+         
+

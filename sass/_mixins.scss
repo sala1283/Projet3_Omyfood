@@ -1,0 +1,164 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+// Style pour les boutons
+@mixin btn-style() {                
+    .btn-explore {
+        @include flex-center;
+        flex-wrap: wrap;
+        width: 100%;
+        label {
+            @include flex-center;
+            color: white;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            background: linear-gradient($--secondary, $--primary);
+            padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 3px 10px $--darkgray;
+            transition: 100ms;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.02);
+                box-shadow: 0 3px 10px $--secondary;
+                transition: 0.5s;
+            }
+        }
+        p {
+            font-size: 1.8rem;
+            margin: 0;
+            margin-top: 1.5rem;
+            padding: 0 1rem;
+            flex-basis: 100%;
+        }
+    }
+}
+
+@mixin color-heart {                              // Mixin pour le remplissage du coeur
+    .layout-star {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        .fa-solid.fa-heart { 
+            display: none;
+        }
+       &:hover {
+            cursor: pointer;                        // cache le coeur vide
+            .fa-regular.fa-heart {
+                display: none;
+            }
+            .fa-solid.fa-heart {                    // fait apparaitre le coeur plein pour y affecter le dégradé
+                display: inline;
+            }
+            opacity: 0;                             // opère le dégradé de couleurs
+            background: linear-gradient($--primary 20%, $--secondary 100%);
+            animation: effet-opacity 1.5s ease;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@mixin choix-menu {                                 // création d'un choix de menu
+    .menus {
+        border: 0;
+        padding: 0;
+        @include flex-center;
+        flex-wrap: wrap;
+
+        .articles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            
+            .entrees, .plats, .desserts {
+                @include flex-center;
+                padding-bottom: 3rem;
+                flex-wrap: wrap;
+                width: 32%;
+                align-content: flex-start;
+                // min-width: 320px;
+                h4, p {
+                    margin: 0;
+                    overflow: hidden;             
+                    @include nowrap-ellipsis;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+
+                
+                @include article-menu;
+            }
+        }
+    }
+}
+
+@mixin nowrap-ellipsis {                            // Mixin pour le décalage en arrière du texte des choix de menu pour l'animation
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin article-menu {
+    .article-menu {
+        display: flex;
+        background-color: white;
+        width: 100%;
+        height: 60px;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        box-shadow: 0 2px 5px $--darkgray;
+
+        &:hover .select-choix {
+            margin: 0;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        &:hover .select-choix i {
+            animation: spin 1s;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;              
+            @include nowrap-ellipsis;
+            justify-content: space-between;
+            width: calc(100% - 54px);
+            padding: 0.5rem 0 0.5rem 1rem;
+            &:hover {
+                cursor: pointer;
+            
+            }
+        }
+        .prix {
+            @include flex-center;
+            width: 30px;
+            font-weight: bold;
+            align-items: flex-end;
+            padding: 0 0.5rem 0.5rem 0;
+            border-radius: 0 1rem 1rem 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .select-choix {
+            @include flex-center;
+            background-color: $--lightgreen;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3rem;
+            align-items: center;
+            border-radius: 0 1rem 1rem 0;
+            width: 50px;
+            margin-right: -4rem;
+        }
+    }
+}
