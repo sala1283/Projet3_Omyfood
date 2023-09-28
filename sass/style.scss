@@ -11,7 +11,7 @@ body {
 
     header {
         
-
+        @include intro;   //*  Mixin de l'intro 
         
         h1 {
             font-family : 'Shrikhand', cursive;
@@ -64,13 +64,13 @@ body {
             margin-bottom: 2rem;
             h2 {
                 display: flex;
-                margin: 1rem 0 0 1rem;
+                margin: 2rem 0 0 3rem;
             }
             ol {
                 list-style: none;
                 display: flex;
                 flex-wrap: wrap;
-                gap: 3rem;
+                gap: 2rem;
                 justify-content: center;
                 li {
                     width: 280px;
@@ -174,9 +174,8 @@ body {
                 width: 65px;
             } 
             h2 {
-                margin: 0 0 0 1rem;
+                margin: 1rem 0 0 1rem;
                 display: flex;
-                justify-content: center;
                 padding-top: 2rem;
                 width: 100%;
             }
@@ -211,10 +210,20 @@ body {
     body {
         main {
             .restaurants {
+                h2 {
+                    margin: 1rem 0 0 10rem;
+                }
                 .card {
-                    flex-basis: 45%;
+                    flex-basis: 35%;
                       }
                          }
+                         .menu {
+                            margin-bottom: 2rem;
+                            h2 {
+                                display: flex;
+                                margin: 2rem 0 0 10rem;
+                            }
+                        }
             footer {
                 display: flex;
                 flex-direction: row-reverse;

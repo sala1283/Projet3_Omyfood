@@ -225,8 +225,16 @@ body main .btn-explore label:hover {
   box-shadow: 0 3px 10px #FF79DA;
   transition: 0.5s;
 }
-body main .btn-explore p {
+body main .btn-explore h2 {
   font-size: 1.8rem;
+  margin: 0;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+  flex-basis: 100%;
+}
+body main .btn-explore h3 {
+  font-size: 0.8rem;
+  font-weight: inherit;
   margin: 0;
   margin-top: 1.5rem;
   padding: 0 1rem;
@@ -364,8 +372,16 @@ body footer i {
     box-shadow: 0 3px 10px #FF79DA;
     transition: 0.5s;
   }
-  body main .btn-explore p {
+  body main .btn-explore h2 {
     font-size: 1.8rem;
+    margin: 0;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    flex-basis: 100%;
+  }
+  body main .btn-explore h3 {
+    font-size: 0.8rem;
+    font-weight: inherit;
     margin: 0;
     margin-top: 1.5rem;
     padding: 0 1rem;
