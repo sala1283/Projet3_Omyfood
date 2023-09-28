@@ -14,5 +14,7 @@ Contraintes:
     Compatibilité : Dernières versions de Chrome, Firefox & Safari
 
 Tester le projet:
-Online:
+
+Online: https://sala1283.github.io/Projet3_Omyfood/
+
 Cloner: https://github.com/sala1283/Projet3_Omyfood.git
