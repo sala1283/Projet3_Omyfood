@@ -172,6 +172,12 @@ body main .menus .articles .entrees .article-menu .description, body main .menus
 body main .menus .articles .entrees .article-menu .description:hover, body main .menus .articles .plats .article-menu .description:hover, body main .menus .articles .desserts .article-menu .description:hover {
   cursor: pointer;
 }
+body main .menus .articles .entrees .article-menu .description h4, body main .menus .articles .plats .article-menu .description h4, body main .menus .articles .desserts .article-menu .description h4 {
+  margin: 0;
+}
+body main .menus .articles .entrees .article-menu .description p, body main .menus .articles .plats .article-menu .description p, body main .menus .articles .desserts .article-menu .description p {
+  margin: 0;
+}
 body main .menus .articles .entrees .article-menu .prix, body main .menus .articles .plats .article-menu .prix, body main .menus .articles .desserts .article-menu .prix {
   display: flex;
   justify-content: center;
@@ -179,7 +185,7 @@ body main .menus .articles .entrees .article-menu .prix, body main .menus .artic
   font-weight: bold;
   align-items: flex-end;
   padding: 0 0.5rem 0.5rem 0;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 1rem 0rem 0;
 }
 body main .menus .articles .entrees .article-menu .prix:hover, body main .menus .articles .plats .article-menu .prix:hover, body main .menus .articles .desserts .article-menu .prix:hover {
   cursor: pointer;
@@ -280,7 +286,7 @@ body footer i {
     justify-content: center;
     padding-bottom: 3rem;
     flex-wrap: wrap;
-    width: 32%;
+    width: 60%;
     align-content: flex-start;
   }
   body main .menus .articles .entrees h4, body main .menus .articles .entrees p, body main .menus .articles .plats h4, body main .menus .articles .plats p, body main .menus .articles .desserts h4, body main .menus .articles .desserts p {
@@ -324,6 +330,12 @@ body footer i {
   body main .menus .articles .entrees .article-menu .description:hover, body main .menus .articles .plats .article-menu .description:hover, body main .menus .articles .desserts .article-menu .description:hover {
     cursor: pointer;
   }
+  body main .menus .articles .entrees .article-menu .description h4, body main .menus .articles .plats .article-menu .description h4, body main .menus .articles .desserts .article-menu .description h4 {
+    margin: 0;
+  }
+  body main .menus .articles .entrees .article-menu .description p, body main .menus .articles .plats .article-menu .description p, body main .menus .articles .desserts .article-menu .description p {
+    margin: 0;
+  }
   body main .menus .articles .entrees .article-menu .prix, body main .menus .articles .plats .article-menu .prix, body main .menus .articles .desserts .article-menu .prix {
     display: flex;
     justify-content: center;
@@ -331,7 +343,7 @@ body footer i {
     font-weight: bold;
     align-items: flex-end;
     padding: 0 0.5rem 0.5rem 0;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 1rem 0rem 0;
   }
   body main .menus .articles .entrees .article-menu .prix:hover, body main .menus .articles .plats .article-menu .prix:hover, body main .menus .articles .desserts .article-menu .prix:hover {
     cursor: pointer;
